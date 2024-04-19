@@ -1,0 +1,16 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+CompanyModel _$CompanyModelFromJson(Map<String, dynamic> json) => CompanyModel(
+      name: json['name'] as String?,
+      catchPharse: json['catchPharse'] as String?,
+      bs: json['bs'] as String?,
+    );
+
+Map<String, dynamic> _$CompanyModelToJson(CompanyModel instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'catchPharse': instance.catchPharse,
+      'bs': instance.bs,
+    };

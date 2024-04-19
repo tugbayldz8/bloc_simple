@@ -1,5 +1,6 @@
 import 'package:bloc_simple/feature/home/view/home_view.dart';
 import 'package:bloc_simple/feature/todos/presentation/view/todos_view.dart';
+import 'package:bloc_simple/feature/users/presentation/view/users_view.dart';
 import 'package:flutter/material.dart';
 
 class BaseScreenView extends StatefulWidget {
@@ -32,7 +33,7 @@ class _BaseScreenViewState extends State<BaseScreenView> {
   final _widgets = <Widget>[
     const HomeView(),
     const TodosView(),
-    Container(),
+    const UsersView(),
   ];
 
   @override

@@ -10,9 +10,9 @@ final class TodosService {
       ServiceManager('https://jsonplaceholder.typicode.com/todos');
 
   Future<ResponseModel<List<Todos>>> fetchTodos() async {
-    final response = await serviceManager.fetch();
+    final response = await serviceManager.get();
     if (response.statusCode == HttpStatus.ok) {
-      List decodeData = json.decode(response.body);
+      List decodeData = json.decode(response.body!);
       final data = decodeData.map((e) => Todos.fromJson(e)).toList();
       return ResponseModel<List<Todos>>(data: data);
     } else {
