@@ -1,0 +1,1 @@
+ /Users/alkanatas34/development/tugba/bloc_simple/.dart_tool/flutter_build/34e8e9be90ffafc28189a61f5032ac54/native_assets.yaml: 
