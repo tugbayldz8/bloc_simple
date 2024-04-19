@@ -21,7 +21,7 @@ class _BaseScreenViewState extends State<BaseScreenView> {
         icon: Icon(
           Icons.access_alarm,
         ),
-        label: 'Tgb'),
+        label: 'Tugba'),
     const BottomNavigationBarItem(
         icon: Icon(
           Icons.face,
