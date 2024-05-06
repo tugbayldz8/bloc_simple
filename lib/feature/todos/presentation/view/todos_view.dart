@@ -1,6 +1,6 @@
 import 'package:bloc_simple/feature/todos/model/todos_model.dart';
 import 'package:bloc_simple/feature/todos/presentation/bloc/todos_bloc.dart';
-import 'package:bloc_simple/feature/todos/service/todos_service.dart';
+import 'package:bloc_simple/product/state/container/product_state_items.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -10,7 +10,8 @@ class TodosView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => TodosBloc(TodosService())..add(FetchTodosEvent()),
+      create: (context) =>
+          TodosBloc(ProductStateItems.todosService)..add(FetchTodosEvent()),
       child: const Scaffold(
         body: _ListViewBuilder(),
       ),

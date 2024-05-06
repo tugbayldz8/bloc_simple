@@ -1,13 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:bloc_simple/product/core/service_manager/service_manager.dart';
-import '../../../product/core/base/model/response_model.dart';
+import '../../../product/state/base/model/response_model.dart';
 import '../model/index.dart';
 
 final class UsersService {
-  final _serviceManager =
-      ServiceManager('https://jsonplaceholder.typicode.com/users');
+  UsersService(ServiceManager serviceManager)
+      : _serviceManager = serviceManager;
+  final ServiceManager _serviceManager;
+
   Future<ResponseModel<List<UsersModel>>> fetchUsers() async {
     final response = await _serviceManager.get();
     if (response.statusCode == HttpStatus.ok) {

@@ -140,6 +140,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "dio",
+      "rootUri": "file:///Users/alkanatas34/.pub-cache/hosted/pub.dev/dio-5.4.3+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
       "name": "equatable",
       "rootUri": "file:///Users/alkanatas34/.pub-cache/hosted/pub.dev/equatable-2.0.5",
       "packageUri": "lib/",
@@ -190,6 +196,12 @@
     {
       "name": "frontend_server_client",
       "rootUri": "file:///Users/alkanatas34/.pub-cache/hosted/pub.dev/frontend_server_client-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "get_it",
+      "rootUri": "file:///Users/alkanatas34/.pub-cache/hosted/pub.dev/get_it-7.7.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -470,7 +482,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-04-19T18:35:22.121289Z",
+  "generated": "2024-05-06T21:31:00.063247Z",
   "generator": "pub",
   "generatorVersion": "3.4.0-172.0.dev"
 }

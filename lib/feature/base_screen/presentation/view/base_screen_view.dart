@@ -3,20 +3,17 @@ import 'package:bloc_simple/feature/todos/presentation/view/todos_view.dart';
 import 'package:bloc_simple/feature/users/presentation/view/users_view.dart';
 import 'package:flutter/material.dart';
 
-class BaseScreenView extends StatefulWidget {
-  const BaseScreenView({super.key});
+class BaseScreenView extends StatelessWidget {
+  BaseScreenView({super.key});
 
-  @override
-  State<BaseScreenView> createState() => _BaseScreenViewState();
-}
+  final _pageIndex = ValueNotifier<int>(1);
 
-class _BaseScreenViewState extends State<BaseScreenView> {
-  int pageIndex = 0;
   final _items = <BottomNavigationBarItem>[
     const BottomNavigationBarItem(
         icon: Icon(
           Icons.home,
         ),
+        activeIcon: Icon(Icons.home_outlined),
         label: 'Home'),
     const BottomNavigationBarItem(
         icon: Icon(
@@ -27,6 +24,7 @@ class _BaseScreenViewState extends State<BaseScreenView> {
         icon: Icon(
           Icons.face,
         ),
+        activeIcon: Icon(Icons.face_outlined),
         label: 'Alkn'),
   ];
 
@@ -38,14 +36,22 @@ class _BaseScreenViewState extends State<BaseScreenView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _widgets.elementAt(pageIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        items: _items,
-        onTap: (value) => setState(() {
-          pageIndex = value;
-        }),
-      ),
+    return ValueListenableBuilder<int>(
+      valueListenable: _pageIndex,
+      builder: (context, state, _) {
+        return Scaffold(
+          body: _widgets.elementAt(state),
+          bottomNavigationBar: BottomNavigationBar(
+            showUnselectedLabels: false,
+            type: BottomNavigationBarType.fixed,
+            items: _items,
+            currentIndex: state,
+            onTap: (value) {
+              _pageIndex.value = value;
+            },
+          ),
+        );
+      },
     );
   }
 }

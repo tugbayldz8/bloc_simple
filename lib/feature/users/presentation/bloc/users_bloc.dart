@@ -15,7 +15,7 @@ class UsersBloc extends Bloc<UsersEvent, UsersState> {
     on<FetchUsersEvent>(_fetchUsers);
   }
 
-  FutureOr<void> _fetchUsers(event, emit) async {
+  FutureOr<void> _fetchUsers(UsersEvent event, Emitter<UsersState> emit) async {
     final response = await _usersService.fetchUsers();
     if (response.error != null) {
       return emit(state.copyWith(error: state.error));

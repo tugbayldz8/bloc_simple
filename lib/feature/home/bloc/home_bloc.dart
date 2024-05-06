@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:bloc_simple/feature/home/service/home_service.dart';
+import 'package:bloc_simple/product/state/container/product_state_items.dart';
 import 'package:flutter/material.dart';
 import '../model/post_model.dart';
 part 'home_event.dart';
 part 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  final homeService = HomeService();
+  final homeService = ProductStateItems.homeService;
 
   HomeBloc() : super(HomeInitialState()) {
     on<FetchPostEvent>(_fetchProduct);

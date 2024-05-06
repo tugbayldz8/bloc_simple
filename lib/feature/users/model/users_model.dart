@@ -1,5 +1,5 @@
 import 'package:bloc_simple/feature/users/model/index.dart';
-import 'package:bloc_simple/product/core/base/model/base_model.dart';
+import 'package:bloc_simple/product/state/base/model/base_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'users_model.g.dart';

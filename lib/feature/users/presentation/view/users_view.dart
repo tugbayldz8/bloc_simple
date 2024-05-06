@@ -1,5 +1,5 @@
 import 'package:bloc_simple/feature/users/presentation/bloc/users_bloc.dart';
-import 'package:bloc_simple/feature/users/service/users_service.dart';
+import 'package:bloc_simple/product/state/container/product_state_items.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -11,7 +11,8 @@ class UsersView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => UsersBloc(UsersService())..add(FetchUsersEvent()),
+      create: (context) =>
+          UsersBloc(ProductStateItems.userService)..add(FetchUsersEvent()),
       child: const Scaffold(
         body: _GridViewBuilder(),
       ),
