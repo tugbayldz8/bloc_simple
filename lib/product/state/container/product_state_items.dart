@@ -1,7 +1,7 @@
-import 'package:bloc_simple/feature/home/service/home_service.dart';
-import 'package:bloc_simple/feature/todos/service/todos_service.dart';
-import 'package:bloc_simple/feature/users/service/users_service.dart';
+import 'package:bloc_simple/feature/todos/data/domain/repositories/todos_repository.dart';
+import 'package:bloc_simple/feature/users/data/domain/repositories/users_repository.dart';
 import 'package:bloc_simple/product/state/container/product_state_manager.dart';
+import '../../../feature/home/data/domain/repositories/home_repository.dart';
 
 final class ProductStateItems {
   static UsersService get userService =>

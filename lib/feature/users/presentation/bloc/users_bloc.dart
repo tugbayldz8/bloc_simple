@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
-import 'package:bloc_simple/feature/users/model/index.dart';
+import 'package:bloc_simple/feature/users/data/model/index.dart';
 import 'package:equatable/equatable.dart';
-import '../../service/users_service.dart';
+import '../../data/domain/repositories/users_repository.dart';
 
 part 'users_event.dart';
 part 'users_state.dart';

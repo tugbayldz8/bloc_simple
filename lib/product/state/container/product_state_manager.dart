@@ -1,9 +1,9 @@
-import 'package:bloc_simple/feature/home/service/home_service.dart';
-import 'package:bloc_simple/feature/todos/service/todos_service.dart';
-import 'package:bloc_simple/feature/users/service/users_service.dart';
+import 'package:bloc_simple/feature/todos/data/domain/repositories/todos_repository.dart';
+import 'package:bloc_simple/feature/users/data/domain/repositories/users_repository.dart';
 import 'package:bloc_simple/product/core/service_manager/dio_service_manager.dart';
 import 'package:bloc_simple/product/core/service_manager/http_service_manager.dart';
 import 'package:get_it/get_it.dart';
+import '../../../feature/home/data/domain/repositories/home_repository.dart';
 
 abstract class ProductStateManager {
   static final _getIt = GetIt.I;

@@ -1,4 +1,4 @@
-import 'package:bloc_simple/feature/home/view/home_view.dart';
+import 'package:bloc_simple/feature/home/presentation/view/home_view.dart';
 import 'package:bloc_simple/feature/todos/presentation/view/todos_view.dart';
 import 'package:bloc_simple/feature/users/presentation/view/users_view.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class BaseScreenView extends StatelessWidget {
   BaseScreenView({super.key});
 
-  final _pageIndex = ValueNotifier<int>(1);
+  final _pageIndex = ValueNotifier<int>(0);
 
   final _items = <BottomNavigationBarItem>[
     const BottomNavigationBarItem(

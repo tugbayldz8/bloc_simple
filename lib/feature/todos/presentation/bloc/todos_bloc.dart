@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import '../../model/todos_model.dart';
-import '../../service/todos_service.dart';
+import '../../data/model/todos_model.dart';
+import '../../data/domain/repositories/todos_repository.dart';
 
 part 'todos_event.dart';
 part 'todos_state.dart';

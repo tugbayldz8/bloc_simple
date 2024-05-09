@@ -3,7 +3,7 @@ import 'package:bloc_simple/product/state/container/product_state_items.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../model/users_model.dart';
+import '../../data/model/users_model.dart';
 
 class UsersView extends StatelessWidget {
   const UsersView({super.key});

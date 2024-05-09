@@ -1,4 +1,4 @@
-import 'package:bloc_simple/feature/todos/model/todos_model.dart';
+import 'package:bloc_simple/feature/todos/data/model/todos_model.dart';
 import 'package:bloc_simple/feature/todos/presentation/bloc/todos_bloc.dart';
 import 'package:bloc_simple/product/state/container/product_state_items.dart';
 import 'package:flutter/material.dart';
